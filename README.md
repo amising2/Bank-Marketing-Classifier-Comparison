@@ -36,7 +36,3 @@ All models were evaluated using:
 - Clients with a successful previous campaign were more likely to subscribe again.
 - Economic indicators like `euribor3m` and `emp.var.rate` were influential.
 
-## 💡 Recommendations
-- Focus campaigns on previously responsive customers.
-- Use cellular contacts and time campaigns based on success seasonality.
-- Integrate model output into marketing decision systems for prioritization
