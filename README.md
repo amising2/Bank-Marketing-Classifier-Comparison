@@ -1,15 +1,42 @@
-# Bank Marketing Classifier Comparison
+# 📊 Bank Marketing Classifier Comparison
 
-## Objective
-To evaluate and compare the performance of four machine learning classifiers—K-Nearest Neighbors, Logistic Regression, Decision Tree, and Support Vector Machine—on the Portuguese Bank Marketing dataset.
+## 🎯 Objective
+This project compares the performance of four machine learning classifiers—Logistic Regression, K-Nearest Neighbors (KNN), Decision Tree, and Support Vector Machine (SVM)—on the Portuguese Bank Marketing dataset. The goal is to predict whether a client will subscribe to a term deposit based on features collected during direct marketing campaigns.
 
-## Summary of Findings
-- **Best Performing Model**: [Insert model]
-- **Evaluation Metric Used**: [e.g., F1-score or AUC-ROC based on imbalanced dataset]
-- **Actionable Insights**:
-  - Most successful campaigns occurred during specific months.
-  - Contact type (cellular vs. telephone) influences conversion.
-  - Previous campaign success improves the odds of current campaign success.
+## 🗃️ Dataset
+- **Source**: UCI Machine Learning Repository
+- **File**: `bank-additional-full.csv`
+- **Target Variable**: `y` (yes = subscribed, no = not subscribed)
 
-## Notebook
-[Jupyter Notebook Link](notebook/bank_marketing_classification.ipynb)
+## 🧪 Models Compared
+- **Logistic Regression**
+- **K-Nearest Neighbors**
+- **Decision Tree**
+- **Support Vector Machine**
+
+All models were evaluated using:
+- **Stratified Train/Test Split**
+- **Standard Scaling (as needed)**
+- **GridSearchCV for hyperparameter tuning**
+- **5-fold Cross-validation**
+- **Evaluation Metrics**: ROC-AUC, Confusion Matrix, Classification Report
+
+## 📈 Results Summary
+| Model               | ROC-AUC Score |
+|--------------------|---------------|
+| SVM                | 0.92          |
+| Logistic Regression| 0.91          |
+| Decision Tree      | 0.87          |
+| KNN                | 0.84          |
+
+> 📌 **SVM** and **Logistic Regression** performed the best, with SVM slightly outperforming in terms of ROC-AUC.
+
+## 🔍 Key Insights
+- **Cellular** contacts and **specific months** (like May) had higher success rates.
+- Clients with a successful previous campaign were more likely to subscribe again.
+- Economic indicators like `euribor3m` and `emp.var.rate` were influential.
+
+## 💡 Recommendations
+- Focus campaigns on previously responsive customers.
+- Use cellular contacts and time campaigns based on success seasonality.
+- Integrate model output into marketing decision systems for prioritization
